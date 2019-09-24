@@ -1,12 +1,11 @@
 <template>
-	<div class="recommend">
-		<div class="rec-title">热销推荐</div>
-		<div class="item-wrap" v-for="item in recommendList" :key="item.id">
+	<div class="weekend">
+		<div class="rec-title">周末去哪儿</div>
+		<div class="item-wrap" v-for="item in weekendList" :key="item.id">
 			<img :src="item.imgUrl" class="item-img"/>
 			<div class="item-info">
 				<p class="item-title ellipsis">{{item.title}}</p>
 				<p class="item-desc ellipsis">{{item.desc}}</p>
-                <button class="item-btn">查看详情</button>
 			</div>
 		</div>
 	</div>
@@ -14,7 +13,7 @@
 <script>
 export default {
 	props: {
-		recommendList: Array
+		weekendList: Array
 	},
 	data() {
 		return {}
@@ -22,7 +21,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.recommend {
+.weekend {
 	.rec-title {
 		height: 0.8rem;
 		line-height: 0.8rem;
@@ -32,16 +31,14 @@ export default {
         font-weight: bold;
     }
     .item-wrap{
-        height:1.9rem;
-        display: flex;
-        align-items: center;
+        overflow: hidden;
+        height:0;
+        padding-bottom:50.9%;
         .item-img{
-            width: 1.7rem;
-            height:1.7rem;
-            padding: .1rem;
+           width: 100%;
         }
         .item-info{
-            flex:1;
+            padding: .1rem;
             min-width: 0;
             .item-title{
                 line-height: .54rem;
@@ -51,13 +48,6 @@ export default {
             .item-desc{
                 line-height: .4rem;
                 color: #ccc;
-            }
-            .item-btn{
-                background: #ff9300;
-                color: #fff;
-                padding: 0 .2rem;
-                border-radius: .04rem;
-                margin-top: .2rem;
             }
         }
     }

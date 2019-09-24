@@ -15,7 +15,6 @@
 		</swiper>
 	</div>
 </template>
-
 <script>
 export default {
 	props: {
@@ -24,11 +23,6 @@ export default {
 	data() {
 		return {
 			swiperOption: {}
-		}
-	},
-	watch: {
-		iconsList(val) {
-			console.log(val)
 		}
 	},
 	computed: {
