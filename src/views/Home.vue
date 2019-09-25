@@ -37,8 +37,6 @@ export default {
         if(res.data.iconList) this.iconsList = res.data.iconList
         if(res.data.recommendList) this.recommendList = res.data.recommendList
         if(res.data.weekendList) this.weekendList = res.data.weekendList
-        
-        console.log(this.weekendList)
     })
   }
 }
